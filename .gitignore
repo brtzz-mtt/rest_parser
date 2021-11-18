@@ -130,4 +130,4 @@ dmypy.json
 .pyre/
 
 # project-specific
-*.csv
+data/
