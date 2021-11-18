@@ -2,9 +2,10 @@
 
 SCRIPT_NAME=`basename "$0"`
 
-if [ $1 = "build" ]; then
+if [ $1 = "build" ]; then #https://pyinstaller.readthedocs.io/en/stable/
     sh $SCRIPT_NAME test
-    pyinstaller index.py
+    #pyinstaller index.py
+    pyinstaller --onefile --windowed index.py
 #elif [ $1 = "cythonize" ]; then
     #sh $SCRIPT_NAME test
     #python build.py build_ext --inplace

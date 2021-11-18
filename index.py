@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-USAGE_INFO = """usage: main <filename.csv>
+USAGE_INFO = """usage: python index.py <filename.csv>
 """
 
 import os, sys
