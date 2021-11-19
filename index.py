@@ -1,17 +1,17 @@
 #!/usr/bin/python
 
-USAGE_INFO = """usage: python index.py <filename.csv>
-"""
-
 import csv, json, os, requests, sys
 
 from datetime import date
 from pathlib import Path
-from pprint import pformat, pprint
+#from pprint import pformat, pprint
 
 from tools import clean_label
 
-SCRIPT_PATH = os.path.dirname(os.path.realpath(__file__)) + '/'
+USAGE_INFO = """usage: python index.py <filename.csv>
+"""#; print(sys.argv)
+
+SCRIPT_PATH = os.getcwd() + '/'#; print(SCRIPT_PATH)
 DATA_PATH = SCRIPT_PATH + 'data/'
 if not Path(DATA_PATH).is_dir():
     os.mkdir(DATA_PATH)
@@ -23,7 +23,7 @@ else:
     SOURCE_PATH = SCRIPT_PATH + sys.argv[1]
     SOURCE_FILE = Path(SOURCE_PATH)
     if not SOURCE_FILE.is_file():
-        print(USAGE_INFO)
+        print(USAGE_INFO)#; print(SOURCE_PATH, SOURCE_FILE)
         sys.exit("ERROR: source file doesn't seem to exist")
 
 if __name__ == '__main__':
