@@ -1,1 +1,2 @@
 Cython==0.29.24
+requests==2.18.4
